@@ -6,6 +6,9 @@ TOKEN = "7926622926:AAGbOZdWTCs6ArwLEz4kWmOFRfFB9jM58qc"
 async def start(update: Update, context):
     await update.message.reply_text(f"Помогу тебе решить твое любимое квадратное уравнение на раз-два")
 
+async def echo(update: Update, context):
+    user_message = update.message.text
+    await update.message.reply_text(f"ті сказаль: {user_message}")
 def main():
     app = Application.builder(). token(TOKEN). build()
     app.add_handler(CommandHandler("start",start))
