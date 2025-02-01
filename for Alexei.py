@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 import math
 
-TOKEN = "Y7926622926:AAGbOZdWTCs6ArwLEz4kWmOFRfFB9jM58qc"
+TOKEN = "7926622926:AAGbOZdWTCs6ArwLEz4kWmOFRfFB9jM58qc"
 
 # Command to solve quadratic equations
 async def solve(update: Update, context: ContextTypes.DEFAULT_TYPE):
