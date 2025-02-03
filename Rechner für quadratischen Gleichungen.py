@@ -5,12 +5,36 @@ TOKEN = "7926622926:AAGbOZdWTCs6ArwLEz4kWmOFRfFB9jM58qc"
 
  # Приветствие
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Даров, помогу без б с твоеими уравнениями")
+    await update.message.reply_text("Даров, помогу без б с твоими уравнениями")
+
+async def echo(update: Update, context: ContextTypes. DEFAULT_TYPE):
+    global position
+    text = update.message
+    if position==0:
+        try:
+            a = float(text)
+            position =+1
+        except:
+            print("Сори, бро, но не понимаю текст.")
+    if position==1:
+        try:
+            a = float(text)
+            position =+1
+        except:
+            print("Та вводи числа, а не текст, оболдуй.")
+    if position==2:
+        try:
+            c = float(text)
+            position =-2
+        except:
+            print("Давай, бубна, не балуйся. Почти закончили.")
+        
+
 
 def main():
     app = Application.builder(). token(TOKEN). build()
     app.add_handler(CommandHandler("start",start_command))
-    # app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))
     app.run_polling()
 
 if __name__ == "__main__":
@@ -18,11 +42,10 @@ if __name__ == "__main__":
 
 
 
-#БОТ
-print("Твоя общая формула : ax^2 + bx + c")
+print ("Твоя общая формула : ax^2 + bx + c")
 a = float(input("введи значение для а: "))
 b = float(input("теперь для b: "))
-c = float(input ("ну и теперь c: "))
+c = float(input("ну и теперь c: "))
 
 
 D = (b**2) - (4*a*c)
