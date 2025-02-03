@@ -2,7 +2,7 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 TOKEN = "7926622926:AAGbOZdWTCs6ArwLEz4kWmOFRfFB9jM58qc"
-a, b, c = 0, 0, 0
+position,a, b, c = 0, 0, 0
  # Приветствие
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Даров, помогу без б с твоими уравнениями")
@@ -16,19 +16,19 @@ async def echo(update: Update, context: ContextTypes. DEFAULT_TYPE):
             a = float(text)
             position =+1
         except:
-            await update.message.reply_text("Сори, бро, но не понимаю текст.")
+            return("Сори, бро, но не понимаю текст.")
     if position==1:
         try:
             b = float(text)
             position =+1
         except:
-            await update.message.reply_text("Та вводи числа, а не текст, оболдуй.")
+            return("Та вводи числа, а не текст, оболдуй.")
     if position==2:
         try:
             c = float(text)
             position =-2
         except:
-            await update.message.reply_text("Давай, бубна, не балуйся. Почти закончили.")
+            return("Давай, бубна, не балуйся. Почти закончили.")
         
 
 
