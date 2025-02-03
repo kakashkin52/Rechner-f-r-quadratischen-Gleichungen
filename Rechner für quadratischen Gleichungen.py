@@ -2,7 +2,12 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 TOKEN = "7926622926:AAGbOZdWTCs6ArwLEz4kWmOFRfFB9jM58qc"
-position,a, b, c = 0, 0, 0
+<<<<<<< HEAD
+position,a, b, c = 0, 0, 0, 0
+=======
+a, b, c = 0, 0, 0
+position = 0
+>>>>>>> bbee617a8a44afcaef867426e731c7b85247512d
  # Приветствие
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Даров, помогу без б с твоими уравнениями")
