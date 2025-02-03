@@ -7,9 +7,14 @@ TOKEN = "7926622926:AAGbOZdWTCs6ArwLEz4kWmOFRfFB9jM58qc"
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Даров, помогу без б с твоеими уравнениями")
 
+def main():
+    app = Application.builder(). token(TOKEN). build()
+    app.add_handler(CommandHandler("start",start_command))
+    # app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))
+    app.run_polling()
 
-
-
+if __name__ == "__main__":
+    main()
 
 #БОТ
 print("Твоя общая формула : ax^2 + bx + c")
