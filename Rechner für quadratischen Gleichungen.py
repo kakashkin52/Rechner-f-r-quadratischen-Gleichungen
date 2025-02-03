@@ -5,7 +5,7 @@ TOKEN = "7926622926:AAGbOZdWTCs6ArwLEz4kWmOFRfFB9jM58qc"
 
  # Приветствие
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Hi! I am ready to help you solve your quadratic equations")
+    await update.message.reply_text("Даров, помогу без б с твоеими уравнениями")
 
 
 
