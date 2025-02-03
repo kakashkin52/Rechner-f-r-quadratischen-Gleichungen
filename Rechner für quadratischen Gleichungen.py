@@ -16,6 +16,8 @@ def main():
 if __name__ == "__main__":
     main()
 
+
+
 #БОТ
 print("Твоя общая формула : ax^2 + bx + c")
 a = float(input("введи значение для а: "))
