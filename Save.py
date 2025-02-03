@@ -1,7 +1,7 @@
 #Подключение к тг
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters 
-TOKEN = "7926622926:AAGbOZdWTCs6ArwLEz4kWmOFRfFB9jM58q"
+TOKEN = "7926622926:AAGbOZdWTCs6ArwLEz4kWmOFRfFB9jM58qc"
 
 async def start(update: Update, context):
     await update.message.reply_text(f"Помогу тебе решить твое любимое квадратное уравнение на раз-два")
