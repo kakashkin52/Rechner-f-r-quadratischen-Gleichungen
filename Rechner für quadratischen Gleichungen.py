@@ -17,18 +17,21 @@ async def echo(update: Update, context: ContextTypes. DEFAULT_TYPE):
         try:
             a = float(text)
             position =+1
+            await update.message.reply_text("Ти ввел значение для (а)")
         except:
             return("Сори, бро, но не понимаю текст.")
     if position==1:
         try:
             b = float(text)
             position =+1
+            await update.message.reply_text("Ти ввел значение для (b)")
         except:
             return("Та вводи числа, а не текст, оболдуй.")
     if position==2:
         try:
             c = float(text)
             position =+1
+            await update.message.reply_text("Ти ввел значение для (с). Сейчас посчитаю")
         except:
             return("Давай, бубна, не балуйся. Почти закончили.")
     if position==3:
