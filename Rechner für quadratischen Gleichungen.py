@@ -9,6 +9,7 @@ position, a, b, c, D = 0, 0, 0, 0, 0
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Даров, помогу без б с твоими уравнениями")
     await update.message.reply_text("Твоя общая формула : ax^2 + bx + c")
+    position==0
 
 #Бот
 async def echo(update: Update, context: ContextTypes. DEFAULT_TYPE):
