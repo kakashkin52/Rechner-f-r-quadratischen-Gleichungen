@@ -13,25 +13,25 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 #Бот
 async def echo(update: Update, context: ContextTypes. DEFAULT_TYPE):
     global position, a, b, c, D
-    text = update.message
+    text = update.message.text
     if position==0:
         try:
             a = float(text)
-            position =+1
+            position +=1
             await update.message.reply_text("Ти ввел значение для (а)")
         except:
             return("Сори, бро, но не понимаю текст.")
     if position==1:
         try:
             b = float(text)
-            position =+1
+            position +=1
             await update.message.reply_text("Ти ввел значение для (b)")
         except:
             return("Та вводи числа, а не текст, оболдуй.")
     if position==2:
         try:
             c = float(text)
-            position =+1
+            position +=1
             await update.message.reply_text("Ти ввел значение для (с). Сейчас посчитаю")
         except:
             return("Давай, бубна, не балуйся. Почти закончили.")
@@ -44,15 +44,15 @@ async def echo(update: Update, context: ContextTypes. DEFAULT_TYPE):
             x2= (-b - square)/(2*a)
             await update.message.reply_text ("x1= ",x1)
             await update.message.reply_text ("x2= ",x2)
-            position=-3
+            position-=3
         if D == 0:
             await update.message.reply_text("Уравнение имеет только одно решение")
             x= -b/(2*a)
             await update.message.reply_text("x= ", x)
-            position=-3
+            position-=3
         if D<0:
             await update.message.reply_text("Уравнение не имеет решений")
-            position=-3
+            position-=3
 
 
 def main():
