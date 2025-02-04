@@ -38,20 +38,20 @@ async def echo(update: Update, context: ContextTypes. DEFAULT_TYPE):
     if position==3:
         D = (b**2) - (4*a*c)
         if D > 0:
-            print("Уравнение имеет 2 решения:")
+            await update.message.reply_text("Уравнение имеет 2 решения:")
             square = D**0.5
             x1= (-b + square)/(2*a)
             x2= (-b - square)/(2*a)
-            print ("x1= ",x1)
-            print ("x2= ",x2)
+            await update.message.reply_text ("x1= ",x1)
+            await update.message.reply_text ("x2= ",x2)
             position=-3
         if D == 0:
-            print("Уравнение имеет только одно решение")
+            await update.message.reply_text("Уравнение имеет только одно решение")
             x= -b/(2*a)
-            print("x= ", x)
+            await update.message.reply_text("x= ", x)
             position=-3
         if D<0:
-            print("Уравнение не имеет решений")
+            await update.message.reply_text("Уравнение не имеет решений")
             position=-3
 
 
