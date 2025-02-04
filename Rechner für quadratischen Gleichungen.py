@@ -48,14 +48,17 @@ async def echo(update: Update, context: ContextTypes. DEFAULT_TYPE):
             await update.message.reply_text ("x1= ",x1)
             await update.message.reply_text ("x2= ",x2)
             position-=3
+            return
         if D == 0:
             await update.message.reply_text("Уравнение имеет только одно решение")
             x= -b/(2*a)
             await update.message.reply_text("x= ", x)
             position-=3
+            return
         if D<0:
             await update.message.reply_text("Уравнение не имеет решений")
             position-=3
+            return
 
 
 def main():
