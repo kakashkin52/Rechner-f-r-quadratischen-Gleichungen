@@ -3,7 +3,7 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 TOKEN = "7926622926:AAGbOZdWTCs6ArwLEz4kWmOFRfFB9jM58qc"
 
-position, a, b, c, D = 0, 0, 0, 0
+position, a, b, c, D = 0, 0, 0, 0, 0
 
  # Приветствие
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -12,7 +12,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 #Бот
 async def echo(update: Update, context: ContextTypes. DEFAULT_TYPE):
-    global position, a, b, c
+    global position, a, b, c, D
     text = update.message
     if position==0:
         try:
